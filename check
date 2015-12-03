@@ -1,0 +1,14 @@
+for ((;1;))
+do
+./sumab_gen
+./sumab_ans
+./sumab
+diff sumab.out sumab.ans
+if [ $? -ne "0" ]; then
+echo "fail"
+exit
+else
+echo "pass"
+fi
+done
+
